@@ -234,9 +234,7 @@ let ejercicio14 = () => {
     }    
 }
 
-let ejercicio15 = () => {  
-    //Este también se podría resolver de forma parecida al anterior
-    //pero sin los else.  
+let ejercicio15 = () => {      
     let num = parseInt(prompt("Ingrese un numero: "))    
     let resultado = [] 
     
@@ -282,10 +280,13 @@ let ejercicio16 = () => {
 
 let ejercicio17 = () => {
     let num = parseInt(prompt("Ingrese un numero: "))
+    //Se asume que el número es primo
     let esPrimo = true
 
     for(let i = 2; i <= num / 2; i++) {
         if(num % i === 0) {
+            //Si entra acá el número no es primo
+            //se rompe el bucle con el break
             esPrimo = false
             break
         }
@@ -344,6 +345,7 @@ let ejercicio20 = () => {
     let resultado = ""
     while(texto !== "cancelar") {
         texto = prompt("Ingrese una palabra")
+        //Este if es para que no imprima la palabra cancelar, si se omite funciona igual el script
         if(texto === "cancelar") {
             break;
         }
@@ -353,6 +355,7 @@ let ejercicio20 = () => {
 }
 
 let ejercicio21 = () => {
+    //Acá creo que me complique mucho seguro hay una forma mas sencilla de leer
     let num = 0
     let resultado = 0
     while(true) {
@@ -416,13 +419,16 @@ let ejercicio25 = () => {
 
     for(let i = 1; i <= MAX; i++) {
         document.write(i)
+        //Se prueba si es multiplo de 4
         if(i % 4 === 0) {
             document.write(' (Múltplo de 4)')
         }
+        //Se prueba si es multiplo de 9
         if(i % 9 === 0) {
             document.write(' (Múltplo de 9)')
-        }
+        }        
         document.write('<br>')
+        //Se prueba si es multiplo de 5 para imprimir la línea
         if(i % 5 === 0) {
             document.write('<hr>')
         }
