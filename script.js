@@ -182,6 +182,8 @@ let ejercicio12ConObjeto = () => {
             vocales[letra] += 1
         }
     }
+    //Con esta opción no puedo ordenar la salida
+    //listando las vocales en orden.
     console.log({vocales})
     for(let letra in vocales) {
         document.write(`Letra ${letra}: ${vocales[letra]} veces`)
@@ -436,4 +438,4 @@ let ejercicio25 = () => {
 }
 
 //cambiar por el numero de ejercicio que se desee ejecutar
-ejercicio25()
+ejercicio12ConObjeto()
